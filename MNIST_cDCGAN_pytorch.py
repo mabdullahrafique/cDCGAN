@@ -208,7 +208,7 @@ class Discriminator(torch.nn.Module):
 # Plot losses
 def plot_loss(d_losses, g_losses, num_epoch, save=False, save_dir='MNIST_cDCGAN_results/', show=False):
     fig, ax = plt.subplots()
-    ax.set_xlim(0, num_epochs)
+    ax.set_xlim(0, num_epoch)
     ax.set_ylim(0, max(np.max(g_losses), np.max(d_losses))*1.1)
     plt.xlabel('Epoch {0}'.format(num_epoch + 1))
     plt.ylabel('Loss values')
